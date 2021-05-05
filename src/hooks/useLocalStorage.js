@@ -14,6 +14,6 @@ const [storedValues, setStoredValues] = useState(() => {
     }
 
 
-    return [storedValue, setValue];
+    return [storedValues, setValue];
 };
 
