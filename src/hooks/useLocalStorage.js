@@ -7,7 +7,14 @@ const [storedValues, setStoredValues] = useState(() => {
     return item ? JSON.parse(item) : initialValue;
   });
 
-  return [storedValue];
+
+  const setValue = value => {
+      window.localStorage.setItem(key, value);
+      setStoredValues(value) 
+    }
+
+
+    return [storedValue, setValue];
 };
 
 export default useLocalStorage;
